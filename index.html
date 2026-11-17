@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de interés compuesto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Calculadora de interés compuesto</h1>
+
+    <form id="formulario">
+      <label>Monto inicial ($)
+        <input id="inicial" type="number" min="0" step="any" value="1000" required>
+      </label>
+      <label>Aportación mensual ($)
+        <input id="aporte" type="number" min="0" step="any" value="200" required>
+      </label>
+      <label>Tasa anual (%)
+        <input id="tasa" type="number" min="0" step="any" value="6" required>
+      </label>
+      <label>Años
+        <input id="anios" type="number" min="1" step="1" value="3" required>
+      </label>
+      <button type="submit">Calcular</button>
+    </form>
+
+    <p id="mensaje" role="alert"></p>
+
+    <div class="tabla-contenedor">
+      <table id="tabla" hidden>
+        <thead>
+          <tr><th>Año</th><th>Aportado</th><th>Saldo</th><th>Ganancia</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <p class="nota">Simulación: no incluye impuestos ni cambios de tasa.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
